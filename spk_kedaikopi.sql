@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Agu 2020 pada 14.26
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.2.28
+-- Waktu pembuatan: 06 Nov 2020 pada 00.06
+-- Versi server: 10.1.37-MariaDB
+-- Versi PHP: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `csb`
+-- Database: `spk_kedaikopi`
 --
 
 -- --------------------------------------------------------
@@ -42,42 +42,31 @@ CREATE TABLE `akun` (
 --
 
 INSERT INTO `akun` (`Id`, `email`, `password`, `nama_admin`, `role_user`, `id_user`) VALUES
-(24, 'adaw@gmail.com', '$2y$10$532LSEr.yu9BBbamzMM3YuFcbFt9Qcm260tanaqYO.pgO.BOIfk3a', 'adaw', '0', NULL),
-(25, 'ahmad@gmail.com', '$2y$10$tmYn7E6jXsNPCJlqSwN/9O68iYx6gCGPA7HDpxPeRCLgFvdog5SqO', '', '1', 13),
-(27, 'hasanudin@gmail.com', '$2y$10$LXy0f5kLcWe99s2alFQmnuWnuiQE/x6UT/XH2IYeMdUdJGAlIy5D.', '', '1', 15),
-(28, 'kisno@gmail.com', '$2y$10$v/IcVQSt4VwmQvy9airmLuE.R5PdDn/Ek4d73FM3xO6fpShIuTdN2', '', '1', 16),
-(33, 'ratna@gmail.com', '$2y$10$ScD3td4DhGk7jDoTm9edNegg0gemWef3bUvQSv7z24tmoIpB.4pda', '', '1', 28),
-(34, 'alviani@gmail.com', '$2y$10$rxF.jBrD6Gcqi9.dkt5GWO72m3eB16X0/KuE/hCxTthpCWALygmVK', '', '1', 29),
-(35, 'muhamad@gmail.com', '$2y$10$X2Ks/bTKfiD88L/GwF/c2.KtHIui6Vs9gZMfE8ubY.gxW8GqNDASC', '', '1', 30),
-(36, 'rasya@gmail.com', '$2y$10$P/0KGJ5/BHuMptkasgxqrOB96SHbzz6shJ9xkYMgmrYnuGPjPP2Be', '', '1', 31),
-(37, 'ratu@gmail.com', '$2y$10$0kfMUP.hB6W4Z..HUCeayuaQ1303jM26/Z4sJFccHF7QRgLOb.HEK', '', '1', 32),
-(38, 'rifqi@gmail.com', '$2y$10$0adS9BVjTCXle6MlbR4fDufDsS.1n1KJx5l7dEv0gVNhpuqgIVzTG', '', '1', 33),
-(39, 'samsul@gmail.com', '$2y$10$Nuyw9MGUztNJAlLp.hOzdOZtHV2gtIGR9D.7xrlVRslHEMjsx9vTa', '', '1', 34),
-(41, 'dedi@gmail.com', '$2y$10$U2sQAmz0.muy0n0eHfv0AORNKEMmM843O4HFqtg0ak4OqEBgvaFvy', '', '1', 36),
-(42, 'sisca@gmail.com', '$2y$10$HyX1Gnj3S.hjAej35PNZGuFV/UgjWpubmFfg6zeGZ4UGBt82lVLBi', '', '1', 37),
+(33, 'guest@guest', '$2y$10$ScD3td4DhGk7jDoTm9edNegg0gemWef3bUvQSv7z24tmoIpB.4pda', '', '1', 1),
 (45, 'admin@gmail.com', '$2y$10$zUZZKaf/RiAV9Lnx.u5wGeStAOSt0oErsloB0K1uSYvzkrHGq1lGq', 'Admin', '0', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bobot`
+-- Struktur dari tabel `alternatif`
 --
 
-CREATE TABLE `bobot` (
-  `id_bobot` int(20) NOT NULL,
-  `nama_kriteria` varchar(30) NOT NULL,
-  `tipe` varchar(20) NOT NULL,
-  `bobot` int(20) NOT NULL
+CREATE TABLE `alternatif` (
+  `id_alternatif` varchar(5) NOT NULL,
+  `nm_alternatif` varchar(35) NOT NULL,
+  `n_vektor_s` double NOT NULL,
+  `n_vektor_v` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `bobot`
+-- Dumping data untuk tabel `alternatif`
 --
 
-INSERT INTO `bobot` (`id_bobot`, `nama_kriteria`, `tipe`, `bobot`) VALUES
-(1, 'Nilai Tes', 'profit', 50),
-(2, 'Gaji Orang Tua', 'profit', 30),
-(3, 'Jarak', 'profit', 20);
+INSERT INTO `alternatif` (`id_alternatif`, `nm_alternatif`, `n_vektor_s`, `n_vektor_v`) VALUES
+('al001', 'RotaryCoffee', 5.6442199792935, 0.2742020019565),
+('al002', 'ReuniKopi', 6.0493251919663, 0.29388242914138),
+('al003', 'Kopi100Kota', 4.7682018128051, 0.23164413995208),
+('al004', 'PokokNgopi', 4.1224206697834, 0.20027142895004);
 
 -- --------------------------------------------------------
 
@@ -98,18 +87,7 @@ CREATE TABLE `detail_pendaftaran` (
 --
 
 INSERT INTO `detail_pendaftaran` (`Id`, `id_user`, `id_admin`, `tanggal_daftar`, `status_pendaftaran`) VALUES
-(11, 13, NULL, '2020-01-12', '0'),
-(13, 15, NULL, '2020-01-12', '0'),
-(14, 16, NULL, '2020-01-12', '0'),
-(19, 28, NULL, '2020-01-12', '0'),
-(20, 29, NULL, '2020-01-13', '0'),
-(21, 30, NULL, '2020-01-13', '0'),
-(22, 31, NULL, '2020-01-13', '0'),
-(23, 32, NULL, '2020-01-13', '0'),
-(24, 33, NULL, '2020-01-13', '0'),
-(25, 34, NULL, '2020-01-13', '0'),
-(27, 36, NULL, '2020-01-13', '0'),
-(28, 37, NULL, '2020-01-13', '0');
+(19, 1, NULL, '2020-01-12', '0');
 
 -- --------------------------------------------------------
 
@@ -118,28 +96,71 @@ INSERT INTO `detail_pendaftaran` (`Id`, `id_user`, `id_admin`, `tanggal_daftar`,
 --
 
 CREATE TABLE `kriteria` (
-  `no` int(20) NOT NULL,
-  `nisn` int(20) NOT NULL,
-  `nilai_tes` int(20) NOT NULL,
-  `jarak` int(20) NOT NULL,
-  `gaji` int(20) NOT NULL
+  `id_kriteria` varchar(5) NOT NULL,
+  `nama_kriteria` varchar(45) NOT NULL,
+  `bobot` double NOT NULL,
+  `sifat` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `kriteria`
 --
 
-INSERT INTO `kriteria` (`no`, `nisn`, `nilai_tes`, `jarak`, `gaji`) VALUES
-(8, 1742689, 3, 1, 4),
-(9, 2129322, 5, 1, 1),
-(10, 2348598, 3, 5, 5),
-(11, 2364889, 2, 3, 5),
-(12, 2712934, 4, 1, 2),
-(13, 2817329, 2, 5, 3),
-(14, 4219302, 3, 4, 4),
-(15, 6374823, 4, 1, 1),
-(16, 7136549, 3, 2, 2),
-(17, 9772347, 3, 2, 2);
+INSERT INTO `kriteria` (`id_kriteria`, `nama_kriteria`, `bobot`, `sifat`) VALUES
+('kr001', 'Harga_Minuman', 20, 'cost'),
+('kr002', 'Harga_Makanan_Berat', 20, 'cost'),
+('kr003', 'Harga_Makanan_Ringan', 20, 'cost'),
+('kr004', 'Fasilitas', 10, 'benefit'),
+('kr005', 'Kebersihan', 10, 'benefit'),
+('kr006', 'Keindahan', 10, 'benefit'),
+('kr007', 'Popularitas', 10, 'benefit');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `nilai`
+--
+
+CREATE TABLE `nilai` (
+  `id_nilai` int(7) NOT NULL,
+  `id_alternatif` varchar(7) NOT NULL,
+  `id_kriteria` varchar(7) NOT NULL,
+  `nilai` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `nilai`
+--
+
+INSERT INTO `nilai` (`id_nilai`, `id_alternatif`, `id_kriteria`, `nilai`) VALUES
+(55, 'al001', 'kr001', 5),
+(56, 'al001', 'kr002', 5),
+(57, 'al001', 'kr003', 5),
+(58, 'al001', 'kr004', 6),
+(59, 'al001', 'kr005', 10),
+(60, 'al001', 'kr006', 7),
+(61, 'al001', 'kr007', 5),
+(62, 'al002', 'kr001', 5),
+(63, 'al002', 'kr002', 5),
+(64, 'al002', 'kr003', 5),
+(65, 'al002', 'kr004', 6),
+(66, 'al002', 'kr005', 10),
+(67, 'al002', 'kr006', 7),
+(68, 'al002', 'kr007', 10),
+(69, 'al003', 'kr001', 3),
+(70, 'al003', 'kr002', 3),
+(71, 'al003', 'kr003', 5),
+(72, 'al003', 'kr004', 5),
+(73, 'al003', 'kr005', 10),
+(74, 'al003', 'kr006', 6),
+(75, 'al003', 'kr007', 10),
+(76, 'al004', 'kr001', 3),
+(77, 'al004', 'kr002', 5),
+(78, 'al004', 'kr003', 3),
+(79, 'al004', 'kr004', 1),
+(80, 'al004', 'kr005', 10),
+(81, 'al004', 'kr006', 7),
+(82, 'al004', 'kr007', 10);
 
 -- --------------------------------------------------------
 
@@ -164,18 +185,7 @@ CREATE TABLE `pendaftaran` (
 --
 
 INSERT INTO `pendaftaran` (`Id`, `nama`, `nisn`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `jarak`, `gaji`) VALUES
-(13, 'Ahmad', 2817329, 'Jakarta', '2008-08-11', 'L', 'Jl. Borobudur', 3, 5000000),
-(15, 'Hasanudin', 2712934, 'Lampung', '2008-06-17', 'L', 'Jl. Bougenville', 17, 3600000),
-(16, 'Kisno', 2129322, 'Jakarta', '2009-01-01', 'L', 'Jl. Mawar', 20, 2700000),
-(28, 'Ratna', 2348598, 'Jakarta', '2009-01-01', 'P', 'Jl. Dosen', 2, 8500000),
-(29, 'Alviani', 4219302, 'Depok', '2009-10-05', 'P', 'Jl. Merak', 6, 7500000),
-(30, 'Muhamad', 7136549, 'Jakarta', '2009-08-14', 'L', 'Jl. Kenanga', 14, 4200000),
-(31, 'Rasya', 1742689, 'Depok', '2008-02-12', 'P', 'Jl. Reformasi', 16, 6300000),
-(32, 'Ratu', 6374823, 'Depok', '2008-03-18', 'P', 'Jl. Rinjani', 15, 2800000),
-(33, 'Rifqi', 9772347, 'Depok', '2008-11-27', 'L', 'Jl. Desa runtuh', 13, 4300000),
-(34, 'Samsul', 2364889, 'Bandung', '2008-09-07', 'L', 'Jl. Maruga', 8, 9000000),
-(36, 'Dedi', 1676534, 'Depok', '2006-02-11', 'L', 'Jl. Kemuning', 3, 4500000),
-(37, 'Sisca', 1821736, 'Bekasi', '2006-01-21', 'P', 'Jl. Merpati', 6, 5500000);
+(1, 'guest', 1, '1', '2009-01-01', '1', '1', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -190,10 +200,10 @@ ALTER TABLE `akun`
   ADD KEY `id_user_2` (`id_user`);
 
 --
--- Indeks untuk tabel `bobot`
+-- Indeks untuk tabel `alternatif`
 --
-ALTER TABLE `bobot`
-  ADD PRIMARY KEY (`id_bobot`);
+ALTER TABLE `alternatif`
+  ADD PRIMARY KEY (`id_alternatif`);
 
 --
 -- Indeks untuk tabel `detail_pendaftaran`
@@ -207,8 +217,13 @@ ALTER TABLE `detail_pendaftaran`
 -- Indeks untuk tabel `kriteria`
 --
 ALTER TABLE `kriteria`
-  ADD PRIMARY KEY (`no`),
-  ADD KEY `nisn` (`nisn`);
+  ADD PRIMARY KEY (`id_kriteria`);
+
+--
+-- Indeks untuk tabel `nilai`
+--
+ALTER TABLE `nilai`
+  ADD PRIMARY KEY (`id_nilai`);
 
 --
 -- Indeks untuk tabel `pendaftaran`
@@ -227,28 +242,22 @@ ALTER TABLE `akun`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- AUTO_INCREMENT untuk tabel `bobot`
---
-ALTER TABLE `bobot`
-  MODIFY `id_bobot` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT untuk tabel `detail_pendaftaran`
 --
 ALTER TABLE `detail_pendaftaran`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT untuk tabel `kriteria`
+-- AUTO_INCREMENT untuk tabel `nilai`
 --
-ALTER TABLE `kriteria`
-  MODIFY `no` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+ALTER TABLE `nilai`
+  MODIFY `id_nilai` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT untuk tabel `pendaftaran`
 --
 ALTER TABLE `pendaftaran`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

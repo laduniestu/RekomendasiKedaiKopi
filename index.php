@@ -1,72 +1,68 @@
 <!DOCTYPE html>
-
 <html lang="en">
-   <!-- Basic -->
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- Mobile Metas -->
-      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-      <!-- Site Metas -->
-      <title>SPK Kedai Kopi</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- Site Icons -->
-      <link rel="shortcut icon" href="#" type="image/x-icon" />
-      <link rel="apple-touch-icon" href="#" />
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="css/bootstrap.min.css" />
-      <!-- Pogo Slider CSS -->
-      <link rel="stylesheet" href="css/pogo-slider.min.css" />
-      <!-- Site CSS -->
-      <link rel="stylesheet" href="css/style.css" />
-      <!-- Responsive CSS -->
-      <link rel="stylesheet" href="css/responsive.css" />
-      <!-- Custom CSS -->
-      <link rel="stylesheet" href="css/custom.css" />
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script>
-      $(document).ready(function(){
-      // Add smooth scrolling to all links
-      $("a").on('click', function(event) {
+<!-- Basic -->
 
-         // Make sure this.hash has a value before overriding default behavior
-         if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-            scrollTop: $(hash).offset().top
-            }, 800, function(){
-         
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-            });
-         } // End if
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Mobile Metas -->
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <!-- Site Metas -->
+   <title>Kopian Malang</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- Site Icons -->
+   <link rel="shortcut icon" href="images/favico_kopianmalang.jpg" type="image/x-icon" />
+   <link rel="apple-touch-icon" href="#" />
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap.min.css" />
+   <!-- Pogo Slider CSS -->
+   <link rel="stylesheet" href="css/pogo-slider.min.css" />
+   <!-- Site CSS -->
+   <link rel="stylesheet" href="css/style.css" />
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="css/responsive.css" />
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/custom.css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         // Add smooth scrolling to all links
+         $("a").on('click', function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+               // Prevent default anchor click behavior
+               event.preventDefault();
+               // Store hash
+               var hash = this.hash;
+               // Using jQuery's animate() method to add smooth page scroll
+               // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+               $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+               }, 800, function () {
+                  // Add hash (#) to URL when done scrolling (default click behavior)
+                  window.location.hash = hash;
+               });
+            } // End if
+         });
       });
-      });
-      </script>
-      <!--[if lt IE 9]>
+   </script>
+   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
-   </head>
-   <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
-      <!-- LOADER -->
-      <div id="preloader">
-         <div class="loader">
-            <img src="images/loader.gif" alt="#" />
-         </div>
+</head>
+
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+   <!-- LOADER -->
+   <div id="preloader">
+      <div class="loader">
+         <img src="images/loader.gif" alt="#" />
       </div>
-      <!-- END LOADER -->
-      <div class="wrapper">
+   </div>
+   <!-- END LOADER -->
+   <div class="wrapper">
       <nav id="sidebar">
          <div class="menu_section">
             <ul>
@@ -86,7 +82,8 @@
                      </div>
                   </div>
                   <div class="col-sm-6">
-                     <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"><img src="images/menu_icon.png"></button>
+                     <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"><img
+                           src="images/menu_icon.png"></button>
                   </div>
                </div>
             </div>
@@ -97,7 +94,7 @@
             <div class="container-fluid">
                <div class="row">
                   <div class="pogoSlider" id="js-main-slider">
-                     <div class="pogoSlider-slide" style="background-image:url(images/slider_1.jpg);">
+                     <div class="pogoSlider-slide" style="background-image:url(images/slider1.jpg);">
                         <div class="container">
                            <div class="row">
                               <div class="col-md-12">
@@ -106,13 +103,13 @@
                                     <h4>MALANG</h4>
                                     <h6>Yuk cari tempat ngopi terbaik di kota Malang</h6>
                                     <br>
-                                    <a class="readmore_bt" href="#section2">More</a>
+                                    <a class="readmore_bt" href="#section2"></a>
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="pogoSlider-slide" style="background-image:url(images/slider_1.jpg);">
+                     <div class="pogoSlider-slide" style="background-image:url(images/slider2.jpg);">
                         <div class="container">
                            <div class="row">
                               <div class="col-md-12">
@@ -121,13 +118,13 @@
                                     <h4>MALANG</h4>
                                     <h6>Yuk cari tempat ngopi terbaik di kota Malang</h6>
                                     <br>
-                                    <a class="readmore_bt" href="#section2">More</a>
+                                    <a class="readmore_bt" href="#section2"></a>
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="pogoSlider-slide" style="background-image:url(images/slider_1.jpg);">
+                     <div class="pogoSlider-slide" style="background-image:url(images/slider3.jpg);">
                         <div class="container">
                            <div class="row">
                               <div class="col-md-12">
@@ -136,7 +133,7 @@
                                     <h4>MALANG</h4>
                                     <h6>Yuk cari tempat ngopi terbaik di kota Malang</h6>
                                     <br>
-                                    <a class="readmore_bt" href="#section2">More</a>
+                                    <a class="readmore_bt" href="#section2"></a>
                                  </div>
                               </div>
                            </div>
@@ -163,73 +160,75 @@
                <div class="row">
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
                      <div class="full feature_box">
-                         <div class="full icon">
-                            <img class="default-block" src="images/icon_1.png" alt="#" />
-                            <img class="default-none" src="images/icon_1w.png" alt="#" />
-                         </div>
-                         <div class="full">
-                            <h4>Menu dan Harga</h4>
-                         </div>
-                         <div class="full">
-                           <p>Merekomendasikan Kedai Kopi berdasarkan daftar menu yang beraneka ragam beserta harganya</p>
-                         </div>
+                        <div class="full icon">
+                           <img class="default-block" src="images/icon_1.png" alt="#" />
+                           <img class="default-none" src="images/icon_1w.png" alt="#" />
+                        </div>
+                        <div class="full">
+                           <h4>Menu dan Harga</h4>
+                        </div>
+                        <div class="full">
+                           <p>Merekomendasikan Kedai Kopi berdasarkan daftar menu yang beraneka ragam beserta harganya
+                           </p>
+                        </div>
                      </div>
                   </div>
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
                      <div class="full feature_box">
-                         <div class="full icon">
-                            <img class="default-block" src="images/icon_2.png" alt="#" />
-                            <img class="default-none" src="images/icon_2w.png" alt="#" />
-                         </div>
-                         <div class="full">
-                            <h4>Fasilitas</h4>
-                         </div>
-                         <div class="full">
-                           <p>Merekomendasikan Kedai Kopi dengan semua fasilitas yang ada seperti Wifi, Colokan, Ac, dll</p>
-                         </div>
+                        <div class="full icon">
+                           <img class="default-block" src="images/icon_2.png" alt="#" />
+                           <img class="default-none" src="images/icon_2w.png" alt="#" />
+                        </div>
+                        <div class="full">
+                           <h4>Fasilitas</h4>
+                        </div>
+                        <div class="full">
+                           <p>Merekomendasikan Kedai Kopi dengan semua fasilitas yang ada seperti Wifi, Colokan, Ac, dll
+                           </p>
+                        </div>
                      </div>
                   </div>
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
                      <div class="full feature_box">
-                         <div class="full icon">
-                            <img class="default-block" src="images/icon_3.png" alt="#" />
-                            <img class="default-none" src="images/icon_3w.png" alt="#" />
-                         </div>
-                         <div class="full">
-                            <h4>Keindahan</h4>
-                         </div>
-                         <div class="full">
+                        <div class="full icon">
+                           <img class="default-block" src="images/icon_3.png" alt="#" />
+                           <img class="default-none" src="images/icon_3w.png" alt="#" />
+                        </div>
+                        <div class="full">
+                           <h4>Keindahan</h4>
+                        </div>
+                        <div class="full">
                            <p>Merekomendasikan Kedai Kopi dengan kebersihan dan keindahan yang diinginkan</p>
-                         </div>
+                        </div>
                      </div>
                   </div>
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
                      <div class="full feature_box">
-                         <div class="full icon">
-                            <img class="default-block" src="images/icon_4.png" alt="#" />
-                            <img class="default-none" src="images/icon_4w.png" alt="#" />
-                         </div>
-                         <div class="full">
-                            <h4>Popularitas</h4>
-                         </div>
-                         <div class="full">
+                        <div class="full icon">
+                           <img class="default-block" src="images/icon_4.png" alt="#" />
+                           <img class="default-none" src="images/icon_4w.png" alt="#" />
+                        </div>
+                        <div class="full">
+                           <h4>Popularitas</h4>
+                        </div>
+                        <div class="full">
                            <p>Mencari kedai kopi dengan Rating terbaik berdasarkan ulasan Google</p>
-                         </div>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
          <!-- end section -->
-      </br></br></br></br></br></br></br>
+         </br></br></br></br></br></br></br>
          <!-- section -->
          <div class="section about_section layout_padding padding_top_0">
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
                      <div class="full center">
-                        <a class="readmore_bt" href="about.html">Coba Sekarang !</a>
-                      </div>
+                        <a class="morebawah" href="login/login.php"></a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -248,29 +247,27 @@
                   </div>
                </div>
                <div class="row">
-                  
                   <div class="col-lg-3 col-md-6 col-sm-6 white_fonts">
                      <div class="full footer_blog f_icon_1">
-                         <p>Address<br><small>Jl. Soekarno Hatta No.9,<br>Jatimulyo, Kec. Lowokwaru,<br>Kota Malang, Jawa Timur, <br>Kode Pos 65141</small></p>
+                        <p>Address<br><small>Jl. Soekarno Hatta No.9,<br>Jatimulyo, Kec. Lowokwaru,<br>Kota Malang, Jawa
+                              Timur, <br>Kode Pos 65141</small></p>
                      </div>
                   </div>
-
                   <div class="col-lg-3 col-md-6 col-sm-6 white_fonts">
                      <div class="full footer_blog f_icon_2">
-                        <p>Phone<br><small>+62 383 3722 987<br>+62 823 3547 7259<br>+62 821 4045 3418<br>08:00 am - 05:00 pm</small></p>
+                        <p>Phone<br><small>+62 383 3722 987<br>+62 823 3547 7259<br>+62 821 4045 3418<br>08:00 am -
+                              05:00 pm</small></p>
                      </div>
                   </div>
-
                   <div class="col-lg-3 col-md-6 col-sm-6 white_fonts">
                      <div class="full footer_blog f_icon_3">
-                         <p>Email<br><small>ilyproject@gmail.com<br>24 X 7 online support</small></p>
+                        <p>Email<br><small>ilyproject@gmail.com<br>24 X 7 online support</small></p>
                      </div>
                   </div>
-
                   <div class="col-lg-3 col-md-6 col-sm-6 white_fonts">
                      <div class="full footer_blog_last">
-                         <p>Social media</p>
-                         <p>
+                        <p>Social media</p>
+                        <p>
                            <ul>
                               <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -278,10 +275,9 @@
                               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                               <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                            </ul>
-                         </p>
+                        </p>
                      </div>
                   </div>
-              
                </div>
             </div>
          </footer>
@@ -313,16 +309,19 @@
       <script src="js/custom.js"></script>
       <!-- End Google Map -->
       <script>
-         $(document).ready(function() {
-           $('#sidebarCollapse').on('click', function() {
-             $('#sidebar, #content').toggleClass('active');
-             $('.collapse.in').toggleClass('in');
-             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-           });
+         $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+               $('#sidebar, #content').toggleClass('active');
+               $('.collapse.in').toggleClass('in');
+               $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
          });
       </script>
       <!-- google map js -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <script
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+      </script>
       <!-- end google map js -->
-   </body>
+</body>
+
 </html>

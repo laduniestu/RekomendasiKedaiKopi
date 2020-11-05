@@ -29,31 +29,57 @@ if ($_SESSION['role_user'] == 0) {
 $getPage = $_GET['page'];
 switch ($getPage) {
 	case 1:
-		$page 				= "include/home.php";
+		$page 				= "include/kriteria_tambah.php";
 		$_SESSION['active']	= "1";
 		break;
 	case 2:
-		$page 				= "include/profile.php";
+		$page 				= "include/kriteria_list.php";
 		$_SESSION['active']	= "2";
 		break;
-    case 24:
-        $page               = "include/jadwal_user.php";
-        $_SESSION['active'] = "12";
+    case 3:
+        $page               = "include/kedai_tambah.php";
+        $_SESSION['active'] = "3";
+        break;
+    case 4:
+        $page               = "include/kedai_list.php";
+        $_SESSION['active'] = "4";
+        break;
+    case 5:
+        $page               = "include/nilai_tambah.php";
+        $_SESSION['active'] = "5";
+        break;
+    case 6:
+        $page               = "include/nilai_list.php";
+        $_SESSION['active'] = "6";
+        break;
+    case 7:
+        $page               = "include/nilai_perbaikan_bobot.php";
+        $_SESSION['active'] = "7";
+        break;
+    case 8:
+        $page               = "include/nilai_vektor_s.php";
+        $_SESSION['active'] = "8";
+        break;
+    case 9:
+        $page               = "include/nilai_prefensi_alternatif.php";
+        $_SESSION['active'] = "9";
         break;
 	default:
-		$page 	= "include/home.php";
+		$page 	= "include/kriteria_tambah.php";
 		$_SESSION['active']	= "1";
 		break;
 }
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>Dashboard <?php echo $role; ?></title>
     <?php
         include "include/libs.php";
     ?>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
@@ -63,7 +89,7 @@ switch ($getPage) {
             -->
             <div class="logo">
                 <a href="" class="simple-text">
-                    Selamat datang <?php $role == "Admin" ? print($nama_admin) : print($nama_panggilan); ?>
+                    Selamat datang
                 </a>
             </div>
             <div class="sidebar-wrapper">
@@ -71,42 +97,61 @@ switch ($getPage) {
                     <li class="<?php $_SESSION['active'] == 1 ? print("active") : print("") ?>">
                         <a href="index.php?page=1">
                             <i class="material-icons"></i>
-                            <p>Home</p>
+                            <p>Tambah Kriteria</p>
                         </a>
                     </li>
-					<?php
-					if ($role == "User") {
-					?>
-					<li class="<?php $_SESSION['active'] == 2 ? print("active") : print("") ?>">
+                    <li class="<?php $_SESSION['active'] == 2 ? print("active") : print("") ?>">
                         <a href="index.php?page=2">
                             <i class="material-icons"></i>
-                            <p>User Profile </p>
+                            <p>Daftar Kriteria</p>
                         </a>
                     </li>
-					<?php
-					}
-					?>
-                    <?php
-					if ($role == "Admin") {
-				echo'<script> window.location="../../tb_csb.php"; </script> ';
-					}
-					?>
-                    <?php
-                    if ($role == "User") {
-                    ?>
-                    <li class="<?php $_SESSION['active'] == 12 ? print("active") : print("") ?>">
-                        <a href="index.php?page=24">
+                    <li class="<?php $_SESSION['active'] == 3 ? print("active") : print("") ?>">
+                        <a href="index.php?page=3">
                             <i class="material-icons"></i>
-                            <p>Pengumuman</p>
+                            <p>Tambah Kedai Kopi</p>
                         </a>
                     </li>
-                    <?php
-                    }
-                    ?>
+                    <li class="<?php $_SESSION['active'] == 4 ? print("active") : print("") ?>">
+                        <a href="index.php?page=4">
+                            <i class="material-icons"></i>
+                            <p>Daftar Kedai Kopi</p>
+                        </a>
+                    </li>
+                    <li class="<?php $_SESSION['active'] == 5 ? print("active") : print("") ?>">
+                        <a href="index.php?page=5">
+                            <i class="material-icons"></i>
+                            <p>Tambah Nilai</p>
+                        </a>
+                    </li>
+                    <li class="<?php $_SESSION['active'] == 6 ? print("active") : print("") ?>">
+                        <a href="index.php?page=6">
+                            <i class="material-icons"></i>
+                            <p>Daftar Nilai</p>
+                        </a>
+                    </li>
+                    <li class="<?php $_SESSION['active'] == 7 ? print("active") : print("") ?>">
+                        <a href="index.php?page=7">
+                            <i class="material-icons"></i>
+                            <p>Nilai Perbaikan Bobot</p>
+                        </a>
+                    </li>
+                    <li class="<?php $_SESSION['active'] == 8 ? print("active") : print("") ?>">
+                        <a href="index.php?page=8">
+                            <i class="material-icons"></i>
+                            <p>Nilai Vektor S</p>
+                        </a>
+                    </li>
+                    <li class="<?php $_SESSION['active'] == 9 ? print("active") : print("") ?>">
+                        <a href="index.php?page=9">
+                            <i class="material-icons"></i>
+                            <p>Ranking</p>
+                        </a>
+                    </li>
                     <li>
                         <a href="../logout.php">
                             <i class="material-icons text-gray"></i>
-                            <p>Logout</p>
+                            <p>Keluar</p>
                         </a>
                     </li>
                 </ul>
@@ -142,10 +187,11 @@ switch ($getPage) {
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
 <script>
-    $(document).ready(function(){
-        $("#cetak").click(function(){
+    $(document).ready(function () {
+        $("#cetak").click(function () {
             window.print();
         });
     });
 </script>
+
 </html>
