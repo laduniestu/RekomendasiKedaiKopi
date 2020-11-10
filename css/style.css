@@ -2653,19 +2653,12 @@ ul.bottom_menu li {
     background-image: url("../images/contact_bg.png");
     background-size: 50% auto;
     background-repeat: no-repeat;
-    background-position: right center;
+    background: #fff;
 
 }
 
+
 .contact_form {
-    background: #fff;
-    background-size: cover;
-    background-position: center center;
-    min-height: auto;
-    padding: 45px 65px 65px;
-    max-width: 770px;
-    margin: 142px 0;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
 }
 
 .field input {
@@ -2697,7 +2690,7 @@ ul.bottom_menu li {
 }
 
 .contact_form_inner button {
-    width: 210px;
+    width: 400px;
     height: 60px;
     border: none;
     font-size: 20px;

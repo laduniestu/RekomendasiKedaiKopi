@@ -12,13 +12,13 @@ if (isset($_POST['submit'])) {
 	if ($exec) {
 		if (mysqli_num_rows($exec) > 0) {
 			while ($rows = mysqli_fetch_array($exec)) {
-			    if (password_verify($password,$rows['password'])) {
-			    	$_SESSION['role_user'] 	= $rows['role'];
-			    	$_SESSION['auth']		= $rows['id_daftar'];
-			    	echo'<script> window.location=""; </script> ';
-			    }else{
-			    	echo 'Password Salah!';
-			    }
+					if (password_verify($password,$rows['password'])) {
+$_SESSION['role_user'] 	= $rows['role'];
+$_SESSION['auth']		= $rows['id_daftar'];
+echo'<script> window.location=""; </script> ';
+}else{
+echo 'Password Salah!';
+}
 			}
 		}else{
 			$query	=	"SELECT password,role_user,id, nama_admin from akun
@@ -27,14 +27,14 @@ if (isset($_POST['submit'])) {
 			if ($exec) {
 				if (mysqli_num_rows($exec) > 0) {
 					while ($rows = mysqli_fetch_array($exec)) {
-					    if (password_verify($password,$rows['password'])) {
-					    	$_SESSION['role_user'] 	= $rows['role_user'];
-					    	$_SESSION['auth']		= $rows['id'];
-					    	$_SESSION['nama_admin']		= $rows['nama_admin'];
-					    	echo'<script> window.location="dashboard/index.php"; </script> ';
-					    }else{
-					    	echo 'Password Salah!';
-					    }
+if (password_verify($password,$rows['password'])) {
+$_SESSION['role_user'] 	= $rows['role_user'];
+$_SESSION['auth']		= $rows['id'];
+$_SESSION['nama_admin']		= $rows['nama_admin'];
+echo'<script> window.location="dashboard/index.php"; </script> ';
+}else{
+echo 'Password Salah!';
+}
 					}
 				}else{
 					echo 'Tidak ada user terdaftar';

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
-
 <head>
+<?php
+include ("login/koneksi/koneksi.php");
+?>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <!-- Mobile Metas -->
@@ -26,6 +28,26 @@
    <!-- Custom CSS -->
    <link rel="stylesheet" href="css/custom.css" />
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <style>
+      
+      input[type="text"]::placeholder {
+
+         /* Firefox, Chrome, Opera */
+         text-align: center ;
+      }
+
+      input[type="email"]::placeholder {
+
+         /* Internet Explorer 10-11 */
+         text-align: center;
+      }
+
+      textarea[type="text"]::placeholder {
+
+         /* Microsoft Edge */
+         text-align: center;
+      }
+   </style>
    <script>
       $(document).ready(function () {
          // Add smooth scrolling to all links
@@ -48,10 +70,7 @@
          });
       });
    </script>
-   <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+
 </head>
 
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
@@ -220,6 +239,7 @@
             </div>
          </div>
          <!-- end section -->
+
          </br></br></br></br></br></br></br>
          <!-- section -->
          <div class="section about_section layout_padding padding_top_0">
@@ -234,18 +254,77 @@
             </div>
          </div>
          <!-- end section -->
+         <!-- section -->
+         <div class="section about_section layout_padding padding_top_0">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                     <div class="full">
+                        <div class="heading_small center">
+                           <h4>Tentang Kami</h4>
+                        </div>
+                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+                        </p>
+                     </div>
+                  </div>
+                  <div class=" col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                     <form method="POST" class="contact_form_inner contact_section" action="">
+                        <div class="heading_small center">
+                           <h4>Kritik & Saran</h4>
+                        </div>
+                        <fieldset>
+                           <div class="field">
+                              <input class="form-control" type="text" name="nama" placeholder="Your name" />
+                           </div>
+                           <div class="field">
+                              <input class="form-control" type="email" name="email" placeholder="Email" />
+                           </div>
+                           <div class="field">
+                              <textarea class="form-control" type="text" name="pesan" placeholder="Message"></textarea>
+                           </div>
+                           <div class="field center">
+                              <input type="submit" name="simpan" value="Kirim" class="margin-top_30">
+                           </div>
+                        </fieldset>
+                     </form>
+                  </div>
+
+                  <?php
+if(isset($_POST['simpan'])){
+	$s=mysqli_query($conn, "insert into kritiksaran (nama_kritiksaran,email_kritiksaran,pesan_kritiksaran) values('$_POST[nama]','$_POST[email]','$_POST[pesan]')");
+	if($s){
+      echo "<script>alert('Kritik Saran Terkirim'); window.open('index.php','_self');</script>";
+	}
+}
+?>
+               </div>
+            </div>
+         </div>
+         <!-- end section -->
          <!-- Start Footer -->
          <footer class="footer-box">
             <div class="container">
+
                <div class="row">
                   <div class="col-md-12">
                      <div class="full">
                         <div class="heading_main text_align_center white_fonts margin-bottom_30">
-                           <h2>Tentang Kami</h2>
+                           <h2>Kontak</h2>
                         </div>
                      </div>
                   </div>
                </div>
+
                <div class="row">
                   <div class="col-lg-3 col-md-6 col-sm-6 white_fonts">
                      <div class="full footer_blog f_icon_1">
@@ -317,11 +396,6 @@
             });
          });
       </script>
-      <!-- google map js -->
-      <script
-         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
-      </script>
-      <!-- end google map js -->
 </body>
 
 </html>

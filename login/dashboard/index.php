@@ -64,9 +64,13 @@ switch ($getPage) {
         $page               = "include/nilai_prefensi_alternatif.php";
         $_SESSION['active'] = "9";
         break;
+    case 10:
+        $page               = "include/kritik_saran.php";
+        $_SESSION['active'] = "10";
+        break;
 	default:
-		$page 	= "include/kriteria_tambah.php";
-		$_SESSION['active']	= "1";
+		$page 	= "include/default.php";
+		$_SESSION['active']	= "0";
 		break;
 }
 ?>
@@ -89,72 +93,101 @@ switch ($getPage) {
             -->
             <div class="logo">
                 <a href="" class="simple-text">
-                    Selamat datang
+                    Selamat Datang
                 </a>
             </div>
             <div class="sidebar-wrapper">
-                <ul class="nav">
-                    <li class="<?php $_SESSION['active'] == 1 ? print("active") : print("") ?>">
-                        <a href="index.php?page=1">
-                            <i class="material-icons"></i>
-                            <p>Tambah Kriteria</p>
-                        </a>
-                    </li>
-                    <li class="<?php $_SESSION['active'] == 2 ? print("active") : print("") ?>">
-                        <a href="index.php?page=2">
-                            <i class="material-icons"></i>
-                            <p>Daftar Kriteria</p>
-                        </a>
-                    </li>
-                    <li class="<?php $_SESSION['active'] == 3 ? print("active") : print("") ?>">
-                        <a href="index.php?page=3">
-                            <i class="material-icons"></i>
-                            <p>Tambah Kedai Kopi</p>
-                        </a>
-                    </li>
-                    <li class="<?php $_SESSION['active'] == 4 ? print("active") : print("") ?>">
-                        <a href="index.php?page=4">
-                            <i class="material-icons"></i>
-                            <p>Daftar Kedai Kopi</p>
-                        </a>
-                    </li>
-                    <li class="<?php $_SESSION['active'] == 5 ? print("active") : print("") ?>">
-                        <a href="index.php?page=5">
-                            <i class="material-icons"></i>
-                            <p>Tambah Nilai</p>
-                        </a>
-                    </li>
-                    <li class="<?php $_SESSION['active'] == 6 ? print("active") : print("") ?>">
-                        <a href="index.php?page=6">
-                            <i class="material-icons"></i>
-                            <p>Daftar Nilai</p>
-                        </a>
-                    </li>
-                    <li class="<?php $_SESSION['active'] == 7 ? print("active") : print("") ?>">
-                        <a href="index.php?page=7">
-                            <i class="material-icons"></i>
-                            <p>Nilai Perbaikan Bobot</p>
-                        </a>
-                    </li>
-                    <li class="<?php $_SESSION['active'] == 8 ? print("active") : print("") ?>">
-                        <a href="index.php?page=8">
-                            <i class="material-icons"></i>
-                            <p>Nilai Vektor S</p>
-                        </a>
-                    </li>
-                    <li class="<?php $_SESSION['active'] == 9 ? print("active") : print("") ?>">
-                        <a href="index.php?page=9">
-                            <i class="material-icons"></i>
-                            <p>Ranking</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../logout.php">
-                            <i class="material-icons text-gray"></i>
-                            <p>Keluar</p>
-                        </a>
-                    </li>
-                </ul>
+                <?php if($role == "Admin"){
+                    echo '
+                        <ul class="nav">
+                            <li class="">
+                                <a href="index.php?page=1">
+                                    <i class="material-icons"></i>
+                                    <p>Tambah Kriteria </p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=2">
+                                    <i class="material-icons"></i>
+                                    <p>Daftar Kriteria</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=3">
+                                    <i class="material-icons"></i>
+                                    <p>Tambah Kedai Kopi</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=4">
+                                    <i class="material-icons"></i>
+                                    <p>Daftar Kedai Kopi</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=5">
+                                    <i class="material-icons"></i>
+                                    <p>Tambah Nilai</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=6">
+                                    <i class="material-icons"></i>
+                                    <p>Daftar Nilai</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=7">
+                                    <i class="material-icons"></i>
+                                    <p>Nilai Perbaikan Bobot</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=8">
+                                    <i class="material-icons"></i>
+                                    <p>Nilai Vektor S</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=9">
+                                    <i class="material-icons"></i>
+                                    <p>Ranking</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=10">
+                                    <i class="material-icons"></i>
+                                    <p>Kritik & Saran</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../logout.php">
+                                    <i class="material-icons text-gray"></i>
+                                    <p>Keluar</p>
+                                </a>
+                            </li>
+                        </ul>
+                    ';
+                }
+                else{
+                    echo '
+                        <ul class="nav">
+                            <li class="">
+                                <a href="index.php?page=9">
+                                    <i class="material-icons"></i>
+                                    <p>Ranking</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../logout.php">
+                                    <i class="material-icons text-gray"></i>
+                                    <p>Keluar</p>
+                                </a>
+                            </li>
+                        </ul>
+                    ';
+                }?>
+
             </div>
         </div>
         <div class="main-panel">

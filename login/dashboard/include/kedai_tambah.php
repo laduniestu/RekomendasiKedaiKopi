@@ -28,7 +28,7 @@ $IDbaru = $char . sprintf("%03s", $noUrut);
 </div>
 <?php
 if(isset($_POST['simpan'])){
-	$s=mysqli_query($koneksi, "insert into alternatif (id_alternatif,nm_alternatif) values('$_POST[id_alternatif]','$_POST[nama_alternatif]')");
+	$s=mysqli_query($conn, "insert into alternatif (id_alternatif,nm_alternatif) values('$_POST[id_alternatif]','$_POST[nama_alternatif]')");
 	if($s){
 		echo "<script>alert('Disimpan'); window.open('index.php?a=alternatif&k=alternatif','_self');</script>";
 	}

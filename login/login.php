@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 			    if (password_verify($password,$rows['password'])) {
 			    	$_SESSION['role_user'] 	= $rows['role'];
 			    	$_SESSION['auth']		= $rows['id_daftar'];
-			    	echo'<script> window.location=""; </script> ';
+			    	echo'<script> window.location="dashboard/index.php"; </script> ';
 			    }else{
 			    	echo 'Password Salah!';
 			    }
