@@ -44,10 +44,6 @@ switch ($getPage) {
         $page               = "include/kedai_list.php";
         $_SESSION['active'] = "4";
         break;
-    case 5:
-        $page               = "include/nilai_tambah.php";
-        $_SESSION['active'] = "5";
-        break;
     case 6:
         $page               = "include/nilai_list.php";
         $_SESSION['active'] = "6";
@@ -101,12 +97,6 @@ switch ($getPage) {
                     echo '
                         <ul class="nav">
                             <li class="">
-                                <a href="index.php?page=1">
-                                    <i class="material-icons"></i>
-                                    <p>Tambah Kriteria </p>
-                                </a>
-                            </li>
-                            <li class="">
                                 <a href="index.php?page=2">
                                     <i class="material-icons"></i>
                                     <p>Daftar Kriteria</p>
@@ -125,15 +115,9 @@ switch ($getPage) {
                                 </a>
                             </li>
                             <li class="">
-                                <a href="index.php?page=5">
-                                    <i class="material-icons"></i>
-                                    <p>Tambah Nilai</p>
-                                </a>
-                            </li>
-                            <li class="">
                                 <a href="index.php?page=6">
                                     <i class="material-icons"></i>
-                                    <p>Daftar Nilai</p>
+                                    <p>Nilai</p>
                                 </a>
                             </li>
                             <li class="">
@@ -151,13 +135,25 @@ switch ($getPage) {
                             <li class="">
                                 <a href="index.php?page=9">
                                     <i class="material-icons"></i>
-                                    <p>Ranking</p>
+                                    <p>Ranking Kedai</p>
                                 </a>
                             </li>
                             <li class="">
                                 <a href="index.php?page=10">
                                     <i class="material-icons"></i>
                                     <p>Kritik & Saran</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=9">
+                                    <i class="material-icons"></i>
+                                    <p>Ranking Kedai</p>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="index.php?page=10">
+                                    <i class="material-icons"></i>
+                                    <p>Kritik dan  Saran</p>
                                 </a>
                             </li>
                             <li>
@@ -193,6 +189,7 @@ switch ($getPage) {
         <div class="main-panel">
             <div class="content">
                 <div class="container-fluid">
+                </br>
                     <?php
                     include $page;
                     ?>

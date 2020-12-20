@@ -7,7 +7,7 @@ $h=mysqli_num_rows($s);
 	<h3 class="box-title ">Nilai Kedai Kopi</h3>
 </div>
 <div class="table table-bordered table-responsive">
-	<table class="table table-bordered table-responsive">
+	<table class="table table-stripped table-hover table-bordered">
 		<thead>
 			<tr>
 				<th rowspan="2">No</th>

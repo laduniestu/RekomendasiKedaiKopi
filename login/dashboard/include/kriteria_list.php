@@ -2,14 +2,14 @@
     <h3 class="box-title">Daftar Kriteria</h3>
 </div>
 <div class="table-responsive">
-    <table class="table table-bordered table-striped">
+    <table class="table table-stripped table-hover table-bordered">
         <thead>
             <tr>
                 <th>Id Kriteria</th>
                 <th>Nama Kriteria</th>
                 <th>Bobot</th>
                 <th>Sifat Kriteria</th>
-                <th>Pilihan</th>
+                <!-- <th>Pilihan</th> -->
             </tr>
         </thead>
         <tbody>
@@ -23,10 +23,10 @@ while($d=mysqli_fetch_assoc($s)){
                 <td><?php echo $d['nama_kriteria']; ?></td>
                 <td><?php echo $d['bobot']; ?></td>
                 <td><?php echo $d['sifat']; ?></td>
-                <td>
+                <!-- <td>
                     <a href="?a=kriteria&k=ubahk&id=<?php echo $d['id_kriteria']; ?>" class="btn btn-warning">Ubah</a>
                     <a href="hapus.php?id=<?php echo $d['id_kriteria']; ?>" class="btn btn-danger">Hapus</a>
-                </td>
+                </td> -->
             </tr>
             <?php
 }

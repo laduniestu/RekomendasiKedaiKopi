@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Nov 2020 pada 02.34
+-- Waktu pembuatan: 06 Nov 2020 pada 00.06
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.1
 
@@ -66,8 +66,7 @@ INSERT INTO `alternatif` (`id_alternatif`, `nm_alternatif`, `n_vektor_s`, `n_vek
 ('al001', 'RotaryCoffee', 5.6442199792935, 0.2742020019565),
 ('al002', 'ReuniKopi', 6.0493251919663, 0.29388242914138),
 ('al003', 'Kopi100Kota', 4.7682018128051, 0.23164413995208),
-('al004', 'PokokNgopi', 4.1224206697834, 0.20027142895004),
-('al005', 'Hompimpa', 3.5294913783165, 0);
+('al004', 'PokokNgopi', 4.1224206697834, 0.20027142895004);
 
 -- --------------------------------------------------------
 
@@ -119,29 +118,6 @@ INSERT INTO `kriteria` (`id_kriteria`, `nama_kriteria`, `bobot`, `sifat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kritiksaran`
---
-
-CREATE TABLE `kritiksaran` (
-  `id_kritiksaran` int(5) NOT NULL,
-  `nama_kritiksaran` varchar(30) NOT NULL,
-  `email_kritiksaran` varchar(30) NOT NULL,
-  `pesan_kritiksaran` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `kritiksaran`
---
-
-INSERT INTO `kritiksaran` (`id_kritiksaran`, `nama_kritiksaran`, `email_kritiksaran`, `pesan_kritiksaran`) VALUES
-(1, 'asd', 'asd@asd', 'asd'),
-(2, 'a', 'duni', 'cek'),
-(3, 'laduni', 'dun@dun', 'kritik'),
-(4, 'Duni', 'dun@dun', 'asdasd');
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `nilai`
 --
 
@@ -184,14 +160,7 @@ INSERT INTO `nilai` (`id_nilai`, `id_alternatif`, `id_kriteria`, `nilai`) VALUES
 (79, 'al004', 'kr004', 1),
 (80, 'al004', 'kr005', 10),
 (81, 'al004', 'kr006', 7),
-(82, 'al004', 'kr007', 10),
-(83, 'al005', 'kr001', 4),
-(84, 'al005', 'kr002', 1),
-(85, 'al005', 'kr003', 5),
-(86, 'al005', 'kr004', 5),
-(87, 'al005', 'kr005', 6),
-(88, 'al005', 'kr006', 5),
-(89, 'al005', 'kr007', 5);
+(82, 'al004', 'kr007', 10);
 
 -- --------------------------------------------------------
 
@@ -251,12 +220,6 @@ ALTER TABLE `kriteria`
   ADD PRIMARY KEY (`id_kriteria`);
 
 --
--- Indeks untuk tabel `kritiksaran`
---
-ALTER TABLE `kritiksaran`
-  ADD PRIMARY KEY (`id_kritiksaran`);
-
---
 -- Indeks untuk tabel `nilai`
 --
 ALTER TABLE `nilai`
@@ -285,16 +248,10 @@ ALTER TABLE `detail_pendaftaran`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT untuk tabel `kritiksaran`
---
-ALTER TABLE `kritiksaran`
-  MODIFY `id_kritiksaran` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT untuk tabel `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id_nilai` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id_nilai` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT untuk tabel `pendaftaran`

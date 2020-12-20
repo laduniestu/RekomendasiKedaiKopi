@@ -80,8 +80,8 @@ if (isset($_POST['submit'])) {
 					<form class="form-signin" method="post" action="">
 						<input type="hidden" class="form-control" name="email" value="guest@guest">
 						<input type="hidden" class="form-control" name="password" value="ratna">
-						<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Masuk sebagai
-							Guest</button>
+						<!-- <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Masuk sebagai
+							Guest</button> -->
 						<a class="btn btn-lg btn-primary btn-block" href="loginadmin.php" name="submit">Masuk sebagai
 							ADMIN</a>
 					</form>

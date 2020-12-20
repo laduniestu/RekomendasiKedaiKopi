@@ -29,7 +29,6 @@ include ("login/koneksi/koneksi.php");
    <link rel="stylesheet" href="css/custom.css" />
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <style>
-      
       input[type="text"]::placeholder {
 
          /* Firefox, Chrome, Opera */
@@ -86,6 +85,7 @@ include ("login/koneksi/koneksi.php");
          <div class="menu_section">
             <ul>
                <li><a href="index.php">Home</a></li>
+               <li><a href="kedai/kedai.php">Halaman Kedai</a></li>
                <li><a href="login/login.php">Login</a></li>
             </ul>
          </div>
@@ -247,7 +247,7 @@ include ("login/koneksi/koneksi.php");
                <div class="row">
                   <div class="col-md-12">
                      <div class="full center">
-                        <a class="morebawah" href="login/login.php"></a>
+                        <a class="morebawah" href="kedai/sorting.php"></a>
                      </div>
                   </div>
                </div>
@@ -258,43 +258,43 @@ include ("login/koneksi/koneksi.php");
          <div class="section about_section layout_padding padding_top_0">
             <div class="container">
                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                     <div class="full">
+                  <div class=" col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                     <form method="POST" class="contact_form_inner contact_section" action="">
                         <div class="heading_small center">
                            <h4>Tentang Kami</h4>
                         </div>
-                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-                        </p>
-                     </div>
+                        <fieldset>
+                           <center><div class="field" style="width: 90%;">
+                           Politeknik Negeri Malang (Polinema) awalnya bernama Program Pendidikan Diploma Bidang Teknik, 
+                           Universitas Brawijaya. Polinema dibuka berdasarkan Surat Keputusan Dirjen DIKTI, MENDIKBUD No.03/DJ/Kep/1979 yang 
+                           didirikan oleh Pemerintah Indonesia melalui dana Bank Dunia. Pada tahun 1982, Polinema hanya membuka empat jurusan 
+                           yakni Teknik Elektronika, Teknik Listrik, Teknik Mesin, dan Teknik Sipil.Saat ini, sudah lebih dari 50 program studi 
+                           yang dibagi menjadi dua jenjang pendidikan, yaitu program Diploma (D3) dan juga Sarjana Sain Terapan (SST). 
+                           Bahkan, program studi Teknik Elektro juga menyediakan program pendidikan Magister Terapan yang setara dengan program 
+                           Magister (S2) dengan masa pendidikan 2 tahun atau 4 semester.Politeknik Negeri Malang (Polinema) awalnya bernama 
+                           Program Pendidikan Diploma Bidang Teknik, Universitas Brawijaya. Politeknik Negeri Malang.
+                           </div></center></br>
+                        </fieldset>
+                     </form>
                   </div>
-                  <div class=" col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <div class=" col-xs-6 col-sm-6 col-md-6 col-lg-6" style="height: 100%;">
                      <form method="POST" class="contact_form_inner contact_section" action="">
                         <div class="heading_small center">
                            <h4>Kritik & Saran</h4>
                         </div>
                         <fieldset>
-                           <div class="field">
-                              <input class="form-control" type="text" name="nama" placeholder="Your name" />
+                           <center><div class="field" style="width: 90%;">
+                              <input class="form-control" type="text" name="nama" placeholder="Nama" />
                            </div>
-                           <div class="field">
+                           <div class="field" style="width: 90%;">
                               <input class="form-control" type="email" name="email" placeholder="Email" />
                            </div>
-                           <div class="field">
-                              <textarea class="form-control" type="text" name="pesan" placeholder="Message"></textarea>
+                           <div class="field" style="width: 90%;">
+                              <textarea class="form-control" type="text" name="pesan" placeholder="Pesan"></textarea>
                            </div>
-                           <div class="field center">
-                              <input type="submit" name="simpan" value="Kirim" class="margin-top_30">
-                           </div>
+                           <div class="field center" style="width: 90%;">
+                              <button type="submit" name="simpan" value="Kirim" class="margin-top_30">Kirim</button></br>
+                           </div></center></br>
                         </fieldset>
                      </form>
                   </div>

@@ -33,6 +33,8 @@ $IDbaru = $char . sprintf("%03s", $noUrut);
 </form>
 <?php
 if(isset($_POST['simpan'])){
+	
+
 	$s=mysqli_query($koneksi, "insert into kriteria (id_kriteria,nama_kriteria,bobot,sifat) values ('$_POST[id_kriteria]','$_POST[nama_kriteria]','$_POST[bobot]','$_POST[sifat]')");
 	if($s){
 		echo "<script>alert('Disimpan'); window.open('index.php?a=kriteria&k=kriteria','_self');</script>";

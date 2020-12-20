@@ -2,7 +2,7 @@
     <h3 class="box-title">Daftar Kritik Saran</h3>
 </div>
 <div class="table-responsive">
-    <table class="table table-bordered table-striped">
+    <table class="table table-stripped table-hover table-bordered">
         <thead>
             <tr>
                 <th>ID Kritik Saran</th>
